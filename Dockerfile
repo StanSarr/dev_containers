@@ -16,7 +16,7 @@ RUN apt-get update && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
 
-COPY koober.conf /etc/apache2/sites-available/000-default.conf
+COPY server.conf /etc/apache2/sites-available/000-default.conf
 
 # Install APP
 WORKDIR /var/www

@@ -1,0 +1,18 @@
+web:
+  build: .
+  ports:
+    - "2000:80"
+    - "443:443"
+  volumes:
+    - /Applications/MAMP/htdocs/Koober2:/var/www/html
+  links:
+    - mysqldb:mysqldb
+mysqldb:
+  image: mysql
+  ports:
+      - "3309:3306"
+  environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: koober2
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root

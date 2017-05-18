@@ -17,4 +17,4 @@ mysqldb:
       MYSQL_USER: root
       MYSQL_PASSWORD: root
   volumes:
-      - /var/lib/mysql:/var/lib/mysql
+      - /Users/StanSARR/Documents/DOCKER/mysql:/var/lib/mysql

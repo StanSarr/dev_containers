@@ -7,16 +7,16 @@ MAINTAINER STAN SARR <stan.sarr@koober.com>
 
 # Run any command on terminal
 RUN apt-get update && \
-	apt-get install software-properties-common && \
-	apt-get install python-software-properties && \
-	apt-get install python3-software-properties && \
+	apt-get -y --force-yes install software-properties-common && \
+	apt-get -y --force-yes install python-software-properties && \
+	apt-get -y --force-yes install python3-software-properties && \
 	add-apt-repository ppa:ondrej/php && \
 	apt-key update && \
 	apt-get update && \
     apt-get -y --force-yes install apache2 php5.6 libapache2-mod-php5.6 php5.6-mcrypt php5.6-json php5.6-mysql php5.6-curl php5.6-sqlite php5.6-simplexml default-jre curl git && \
     apt-get clean && \
     update-rc.d apache2 defaults && \
-    php5.6enmod opcache pdo mysql mysqli pdo_mysql readline mcrypt curl sqlite && \
+    phpenmod opcache pdo mysql mysqli pdo_mysql readline mcrypt curl sqlite && \
     a2enmod rewrite && \
     rm -rf /var/www/html && \
     curl -sS https://getcomposer.org/installer | php && \

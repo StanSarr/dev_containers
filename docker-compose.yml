@@ -4,7 +4,7 @@ web:
     - "2000:80"
     - "443:443"
   volumes:
-    - /Applications/MAMP/htdocs/Koober2:/var/www/html
+    - /Users/marek/Documents/Projects/Clients/Koober/KooberWeb:/var/www/html
   links:
     - mysqldb:mysqldb
 mysqldb:
@@ -14,7 +14,6 @@ mysqldb:
   environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: koober2
-      MYSQL_USER: root
       MYSQL_PASSWORD: root
   volumes:
-      - /Users/StanSARR/Documents/DOCKER/mysql:/var/lib/mysql
+      - /Users/marek/Documents/DOCKER/mysql:/var/lib/mysql
